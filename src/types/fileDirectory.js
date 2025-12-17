@@ -30,7 +30,7 @@ export default class FileDirectory {
             let currentTree = tree;
             for (let i = 1; i < parts.length - 1; i++) {
                 const dirName = parts[i];
-                const foundTree = currentTree.subdirectories.find((value) => value.name == dirName);
+                const foundTree = currentTree.subDirs.find((value) => value.name == dirName);
                 if (foundTree) {
                     currentTree = foundTree;
                 }
