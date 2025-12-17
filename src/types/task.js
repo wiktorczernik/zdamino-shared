@@ -1,4 +1,4 @@
-import { LanguageCode } from "../enums/langCode.js"
+import { LangCode } from "../enums/langCode.js"
 import { TaskType } from "../enums/taskType.js"
 
 export default class Task {
@@ -6,7 +6,7 @@ export default class Task {
      * @typedef {Object} TaskParams
      * @property {string} title
      * @property {TaskType} type
-     * @property {Map<LanguageCode, boolean>} solveStatus
+     * @property {Map<LangCode, boolean>} solveStatus
      */
     /** @param {TaskParams} params */
     constructor(params) {
