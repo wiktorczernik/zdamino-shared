@@ -1,5 +1,5 @@
-import { LanguageCode } from "../enums/languageCode"
-import { TaskType } from "../enums/taskType"
+import { LanguageCode } from "../enums/langCode.js"
+import { TaskType } from "../enums/taskType.js"
 
 export default class Task {
     /** 
