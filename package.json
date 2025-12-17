@@ -2,6 +2,13 @@
   "name": "zdamino-shared",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "Wiktor Czernik",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
   "homepage": "https://github.com/wiktorczernik/zdamino-shared#readme",
   "bugs": {
     "url": "https://github.com/wiktorczernik/zdamino-shared/issues"
@@ -9,14 +16,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wiktorczernik/zdamino-shared.git"
-  },
-  "license": "ISC",
-  "author": "Wiktor Czernik",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
