@@ -19,6 +19,14 @@ export default class FileDirectory {
     addSubDir(subDir) {
         this.subDirs.push(subDir);
     }
+    /** @param {string} name */
+    findFile(name) {
+        return this.files.find(file => file.name == name);
+    }
+    /** @param {string} name */
+    findSubDir(name) {
+        return this.subDirs.find(subDir => subDir.name == name);
+    }
 
     /** @param {FileList} source */
     static from(source) {
