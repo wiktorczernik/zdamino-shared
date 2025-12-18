@@ -6,7 +6,7 @@ export default class Task {
      * @typedef {Object} TaskParams
      * @property {string} title
      * @property {TaskType} type
-     * @property {Map<LangCode, boolean>} solveStatus
+     * @property {{ [key: LangCode]: boolean }} solveStatus
      */
     /** @param {TaskParams} params */
     constructor(params) {
@@ -14,7 +14,7 @@ export default class Task {
         this.title = params.title;
         /** @type {TaskType} */
         this.type = params.type;
-        /** @type {Map<LanguageCode, boolean>} */
+        /** @type {{ [key: LangCode]: boolean }} */
         this.solveStatus = params.solveStatus;
     }
 }
