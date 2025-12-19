@@ -7,7 +7,7 @@ export default class Task {
      * @property {string} title
      * @property {TaskType} type
      * @property {{ [key: LangCode]: boolean }} solveStatus
-     * @property {Array<string>} filePaths
+     * @property {{ [key: LangCode]: Array<string> }} filePaths
      */
     /** @param {TaskParams} params */
     constructor(params) {
@@ -17,7 +17,7 @@ export default class Task {
         this.type = params.type;
         /** @type {{ [key: LangCode]: boolean }} */
         this.solveStatus = params.solveStatus;
-        /** @type {Array<string>} */
+        /** @type {{ [key: Array<string>]: boolean }} */
         this.filePaths = params.filePaths;
     }
 }
