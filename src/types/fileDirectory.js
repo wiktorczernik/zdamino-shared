@@ -9,6 +9,8 @@ export default class FileDirectory {
         this.subDirs = new Array();
         /** @type {Array<File>} */
         this.files = new Array();
+        /** @type {FileDirectory | null} */
+        this.parent = null
     }
 
     /** @param {File} file */
@@ -26,6 +28,19 @@ export default class FileDirectory {
     /** @param {string} name */
     findSubDir(name) {
         return this.subDirs.find(subDir => subDir.name == name);
+    }
+    /** @param {FileDirectory} dir */
+    setParent(dir) {
+        this.parent = dir
+    }
+    getFiles(params = { recursively: false }){
+        const ffiles = [...this.files];
+        if (!params.recursively) return ffiles;
+
+        for (const sdir of this.subDirs) {
+            ffiles.push(...sdir.getFiles(params));
+        }
+        return ffiles;
     }
 
     /** @param {FileList} source */
