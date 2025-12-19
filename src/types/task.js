@@ -17,7 +17,7 @@ export default class Task {
         this.type = params.type;
         /** @type {{ [key: LangCode]: boolean }} */
         this.solveStatus = params.solveStatus;
-        /** @type {{ [key: Array<string>]: boolean }} */
+        /** @type {{ [key: LangCode]: Array<string> }} */
         this.filePaths = params.filePaths;
     }
 }
