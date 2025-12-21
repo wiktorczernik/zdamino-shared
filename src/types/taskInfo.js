@@ -1,7 +1,7 @@
 import { LangCode } from "../enums/langCode.js"
 import { TaskType } from "../enums/taskType.js"
 
-export default class Task {
+export default class TaskInfo {
     /** 
      * @typedef {Object} TaskParams
      * @property {string} title
