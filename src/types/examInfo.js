@@ -5,6 +5,7 @@ export default class ExamInfo {
      * @typedef {Object} ExamParams
      * @property {string} fullName
      * @property {string} qualification
+     * @property {number} number
      * @property {number} year
      * @property {number} month
      * @property {string} version
@@ -16,6 +17,8 @@ export default class ExamInfo {
         this.fullName = params?.fullName ?? ""
         /** @type {string} */
         this.qualification = params?.qualification ?? ""
+        /** @type {number} */
+        this.number = params?.number ?? -1
         /** @type {number} */
         this.year = params?.year ?? -1
         /** @type {number} */
