@@ -10,14 +10,14 @@ export default class TaskInfo {
      * @property {{ [key: LangCode]: Array<string> }} filePaths
      */
     /** @param {TaskParams} params */
-    constructor(params) {
+    constructor(params = {}) {
         /** @type {string} */
-        this.title = params.title;
+        this.title = params?.title ?? "";
         /** @type {TaskType} */
-        this.type = params.type;
+        this.type = params?.type ?? "";
         /** @type {{ [key: LangCode]: boolean }} */
-        this.solveStatus = params.solveStatus;
+        this.solveStatus = params?.solveStatus ?? {};
         /** @type {{ [key: LangCode]: Array<string> }} */
-        this.filePaths = params.filePaths;
+        this.filePaths = params?.filePaths ?? [];
     }
 }

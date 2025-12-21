@@ -6,8 +6,8 @@ export default class RawExamInfo {
      * @property {Array<RawTaskInfo>} tasks
      */
     /** @param {RawExamParams} params */
-    constructor(params) {
+    constructor(params = {}) {
         /** @type {Array<RawTaskInfo>} */
-        this.tasks = params.tasks
+        this.tasks = params?.tasks ?? []
     }
 }

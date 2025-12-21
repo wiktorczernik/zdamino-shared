@@ -11,18 +11,18 @@ export default class ExamInfo {
      * @property {Array<TaskInfo>} tasks
      */
     /** @param {ExamParams} params */
-    constructor(params) {
+    constructor(params = {}) {
         /** @type {string} */
-        this.fullName = params.fullName;
+        this.fullName = params?.fullName ?? ""
         /** @type {string} */
-        this.qualification = params.qualification
+        this.qualification = params?.qualification ?? ""
         /** @type {number} */
-        this.year = params.year
+        this.year = params?.year ?? -1
         /** @type {number} */
-        this.month = params.month
+        this.month = params?.month ?? -1
         /** @type {string} */
-        this.version = params.version
+        this.version = params?.version ?? ""
         /** @type {Array<TaskInfo>} */
-        this.tasks = params.tasks
+        this.tasks = params?.tasks ?? []
     }
 }
