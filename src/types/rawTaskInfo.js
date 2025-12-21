@@ -7,10 +7,10 @@ export default class RawTaskInfo {
      * @property {TaskType} type
      */
     /** @param {RawTaskParams} params */
-    constructor(params) {
+    constructor(params = {}) {
         /** @type {string} */
-        this.title = params.title;
+        this.title = params?.title ?? "";
         /** @type {TaskType} */
-        this.type = params.type;
+        this.type = params?.type ?? "";
     }
 }
