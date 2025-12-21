@@ -1,6 +1,6 @@
-import Task from "./task.js"
+import TaskInfo from "./taskInfo.js"
 
-export default class Exam {
+export default class ExamInfo {
     /** 
      * @typedef {Object} ExamParams
      * @property {string} fullName
@@ -8,7 +8,7 @@ export default class Exam {
      * @property {number} year
      * @property {number} month
      * @property {string} version
-     * @property {Array<Task>} tasks
+     * @property {Array<TaskInfo>} tasks
      */
     /** @param {ExamParams} params */
     constructor(params) {
@@ -22,7 +22,7 @@ export default class Exam {
         this.month = params.month
         /** @type {string} */
         this.version = params.version
-        /** @type {Array<Task>} */
+        /** @type {Array<TaskInfo>} */
         this.tasks = params.tasks
     }
 }
